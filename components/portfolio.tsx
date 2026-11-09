@@ -1,20 +1,43 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ArrowUpRight, BriefcaseBusiness, Check, Code2, ExternalLink, Link2, Mail, Menu, Moon, Sparkles, Sun, X } from 'lucide-react'
 import { experience, profile, projects, skillGroups } from './portfolio-data'
 
 export function Portfolio() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [light, setLight] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const theme = light ? 'light' : 'dark'
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed')
+          observer.unobserve(entry.target)
+        }
+      })
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 })
+    document.querySelectorAll('section[id], section[id] article, section[id] > div > div > div, section[id] > div > div.border-l > div').forEach((element) => {
+      element.classList.add('scroll-reveal')
+      observer.observe(element)
+    })
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      observer.disconnect()
+    }
+  }, [])
 
   return (
     <div className={theme}>
-      <main className="min-h-screen overflow-hidden bg-[#08090d] text-[#f4f2ed] selection:bg-violet-500/30 selection:text-white dark:bg-[#08090d] dark:text-[#f4f2ed] light:bg-[#f5f7fb] light:text-[#15161a]">
+      <main className="min-h-screen overflow-x-clip bg-[#08090d] text-[#f4f2ed] selection:bg-violet-500/30 selection:text-white dark:bg-[#08090d] dark:text-[#f4f2ed] light:bg-[#f5f7fb] light:text-[#15161a]">
         <div className="pointer-events-none fixed inset-0 -z-0 opacity-80 [background-image:radial-gradient(circle_at_15%_5%,rgba(99,70,180,.18),transparent_27%),radial-gradient(circle_at_85%_30%,rgba(35,93,173,.13),transparent_25%)]" />
-        <header className="sticky top-0 z-50 border-b border-white/[.08] bg-[#08090d]/80 backdrop-blur-xl light:border-slate-900/10 light:bg-[#f5f7fb]/80">
-          <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-5 sm:px-8">
+        <header className={`sticky top-0 z-50 border-b transition-[height,background-color,backdrop-filter,box-shadow] duration-500 ${scrolled ? 'h-14 border-white/15 bg-[#08090d]/75 shadow-lg shadow-black/10 backdrop-blur-2xl' : 'h-18 border-white/[.08] bg-[#08090d]/80 backdrop-blur-xl'} light:border-slate-900/10 light:bg-[#f5f7fb]/80`}>
+          <div className="mx-auto flex h-full max-w-6xl items-center justify-between px-5 sm:px-8">
             <a href="#top" className="flex items-center gap-3 font-semibold tracking-tight" aria-label="Go to top">
               <span className="grid size-8 place-items-center rounded-lg bg-white text-sm font-black text-[#111217]">TS</span><span className="hidden sm:inline">Tinnaphop<span className="text-violet-400">.</span></span>
             </a>
@@ -32,11 +55,11 @@ export function Portfolio() {
         <div id="top" className="relative z-10 mx-auto max-w-6xl px-5 sm:px-8">
           <section className="grid min-h-[640px] items-center gap-12 py-24 md:grid-cols-[1.15fr_.85fr] md:py-28">
             <div>
-              <div className="mb-7 flex items-center gap-3 text-sm text-violet-300"><span className="size-2 rounded-full bg-emerald-400 shadow-[0_0_14px_#34d399]" /> Available for new opportunities</div>
-              <p className="mb-4 text-sm font-medium tracking-[.2em] text-white/40">HELLO, I&apos;M</p>
-              <h1 className="max-w-3xl text-5xl font-semibold leading-[.98] tracking-[-.055em] sm:text-7xl">Tinnaphop<br /><span className="bg-gradient-to-r from-violet-300 via-indigo-200 to-blue-300 bg-clip-text text-transparent">Saelim<span className="text-violet-400">.</span></span></h1>
-              <p className="mt-8 max-w-xl text-xl leading-relaxed text-white/65">Full Stack Developer building reliable web applications that turn complex business workflows into simple experiences.</p>
-              <div className="mt-9 flex flex-wrap gap-3"><a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#101117] transition hover:bg-violet-100">View projects <ArrowUpRight size={16} /></a><a href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white/80 transition hover:border-white/35 hover:text-white"><Link2 size={16} /> GitHub</a></div>
+              <div className="hero-enter hero-enter-1 mb-7 flex items-center gap-3 text-sm text-violet-300"><span className="size-2 rounded-full bg-emerald-400 shadow-[0_0_14px_#34d399]" /> Available for new opportunities</div>
+              <p className="hero-enter hero-enter-2 mb-4 text-sm font-medium tracking-[.2em] text-white/40">HELLO, I&apos;M</p>
+              <h1 className="hero-enter hero-enter-3 max-w-3xl text-5xl font-semibold leading-[.98] tracking-[-.055em] sm:text-7xl">Tinnaphop<br /><span className="bg-gradient-to-r from-violet-300 via-indigo-200 to-blue-300 bg-clip-text text-transparent">Saelim<span className="text-violet-400">.</span></span></h1>
+              <p className="hero-enter hero-enter-4 mt-8 max-w-xl text-xl leading-relaxed text-white/65">Full Stack Developer building reliable web applications that turn complex business workflows into simple experiences.</p>
+              <div className="hero-enter hero-enter-5 mt-9 flex flex-wrap gap-3"><a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#101117] transition hover:bg-violet-100">View projects <ArrowUpRight size={16} /></a><a href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white/80 transition hover:border-white/35 hover:text-white"><Link2 size={16} /> GitHub</a></div>
               <div className="mt-14 flex flex-wrap gap-x-7 gap-y-3 text-xs text-white/40"><span>React.js</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span></div>
             </div>
             <div className="relative mx-auto w-full max-w-sm md:justify-self-end"><div className="absolute -inset-8 rounded-full bg-violet-500/10 blur-3xl" /><div className="relative rounded-[2rem] border border-white/10 bg-white/[.035] p-4 shadow-2xl shadow-violet-950/30"><div className="rounded-[1.35rem] border border-white/10 bg-[#101118] p-6"><div className="mb-16 flex items-center justify-between text-xs text-white/35"><span>tinnaphop.tsx</span><Code2 size={15} /></div><div className="space-y-3 font-mono text-sm"><p className="text-violet-300"><span className="text-white/30">01</span> const developer = {'{'}</p><p className="pl-5 text-blue-300"><span className="text-white/30">02</span> name: <span className="text-emerald-300">&quot;Tinnaphop&quot;</span>,</p><p className="pl-5 text-blue-300"><span className="text-white/30">03</span> focus: <span className="text-emerald-300">&quot;full-stack&quot;</span>,</p><p className="pl-5 text-blue-300"><span className="text-white/30">04</span> passion: <span className="text-emerald-300">&quot;solving problems&quot;</span></p><p className="text-violet-300"><span className="text-white/30">05</span> {'}'}</p></div><div className="mt-14 flex items-center gap-3 border-t border-white/10 pt-5 text-xs text-white/45"><Sparkles size={14} className="text-violet-300" /> clean code, thoughtful products</div></div></div></div>
