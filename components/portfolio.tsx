@@ -121,19 +121,19 @@ export function Portfolio() {
 function AboutSection() {
   return (
     <section id="about" className="order-2 border-t border-white/[.08] py-16 md:py-20">
-      <div className="mx-auto max-w-4xl">
+      <div className="w-full">
         <div data-reveal>
           <SectionLabel sectionId="about" label="ABOUT ME" />
           <h2 data-reveal className="mt-8 max-w-2xl font-medium leading-[1.12] tracking-[-.045em] text-[clamp(3.625rem,5vw,4rem)]">Beyond Writing Code.</h2>
 <p data-reveal className="mt-4 max-w-2xl leading-[1.7] text-[clamp(1.3125rem,2vw,1.4375rem)] text-violet-200/80">A little more about the developer behind the projects.</p>
           <p data-reveal className="mt-8 font-semibold uppercase tracking-[.12em] text-[clamp(1.1875rem,1.7vw,1.25rem)] text-violet-200">Who I Am</p><p data-reveal className="mt-3 max-w-3xl text-lg leading-8 text-white/65">I&apos;m a Full Stack Developer with a background in Computer Science and hands-on experience building enterprise applications. I enjoy turning business requirements into practical software solutions, working across frontend, backend, and database development.</p>
-          <div data-reveal className="mt-12 grid gap-8 border-t border-white/10 pt-8">
+          <EducationCard />
+          <div data-reveal className="mt-12 grid gap-8 border-t border-white/10 pt-8 sm:grid-cols-2">
             <div><p className="font-semibold uppercase tracking-[.12em] text-[clamp(1.25rem,1.8vw,1.375rem)] text-violet-200">What I Enjoy Building</p><p className="mt-3 max-w-xl leading-[1.65] text-[clamp(1.125rem,1.5vw,1.1875rem)] text-white/60">I&apos;m particularly interested in developing business applications, ERP systems, and tools that simplify complex workflows. I enjoy understanding how systems work together and translating real-world requirements into functional, reliable applications.</p></div>
             <div><p className="font-semibold uppercase tracking-[.12em] text-[clamp(1.25rem,1.8vw,1.375rem)] text-violet-200">How I Approach Development</p><p className="mt-3 max-w-xl leading-[1.65] text-[clamp(1.125rem,1.5vw,1.1875rem)] text-white/60">I value clean, maintainable code and practical problem-solving. I enjoy building applications that support real business operations and turn complex requirements into reliable software.</p></div>
-            <div className="flex flex-wrap gap-2"><span className="rounded-full border border-white/10 bg-white/[.05] px-3 py-2 text-sm text-white/70">Problem Solving</span><span className="rounded-full border border-white/10 bg-white/[.05] px-3 py-2 text-sm text-white/70">Full Stack Development</span><span className="rounded-full border border-white/10 bg-white/[.05] px-3 py-2 text-sm text-white/70">System Thinking</span><span className="rounded-full border border-white/10 bg-white/[.05] px-3 py-2 text-sm text-white/70">Continuous Learning</span></div>
+            <div className="flex flex-wrap gap-2 sm:col-span-2"><span className="rounded-full border border-white/10 bg-white/[.05] px-3 py-2 text-sm text-white/70">Problem Solving</span><span className="rounded-full border border-white/10 bg-white/[.05] px-3 py-2 text-sm text-white/70">Full Stack Development</span><span className="rounded-full border border-white/10 bg-white/[.05] px-3 py-2 text-sm text-white/70">System Thinking</span><span className="rounded-full border border-white/10 bg-white/[.05] px-3 py-2 text-sm text-white/70">Continuous Learning</span></div>
           </div>
         </div>
-        <EducationCard />
       </div>
     </section>
   )
