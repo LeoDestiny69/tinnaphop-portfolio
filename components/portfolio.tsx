@@ -199,4 +199,4 @@ function FeaturedExperience() {
   )
 }
 
-function SectionLabel({ sectionId, label }: { sectionId: string; label: string }) { return <div className="flex items-center gap-3 text-[15px] font-semibold uppercase tracking-[.16em] text-violet-300"><span>{sectionNumber(sectionId)}</span><span className="h-px w-8 bg-violet-300/50" /><span>{label}</span></div> }
+function SectionLabel({ sectionId, label }: { sectionId: string; label: string }) { return <div className="section-label flex items-center gap-3 font-semibold uppercase tracking-[.16em] text-violet-300"><span>{sectionNumber(sectionId)}</span><span className="h-px w-8 bg-violet-300/50" /><span>{label}</span></div> }
