@@ -236,7 +236,7 @@ section[id] > div > div.border-l > div.scroll-reveal:nth-child(3) { transition-d
 .light [class*="border-white/"] { border-color: #D5D0C8 !important; }
 .light [class*="bg-white/"] { background-color: #E7E3DC !important; }
 .light .bg-white { background-color: #6654A8 !important; color: #FFFFFF !important; }
-.light [class*="bg-[#08090d]"], .light [class*="bg-[#101118]"] { background-color: #E7E3DC !important; }
+.light [class*="bg-[#101118]"] { background-color: #E7E3DC !important; }
 .light .experience-feature, .light .project-card { background: #E7E3DC !important; border-color: #D5D0C8 !important; box-shadow: 0 18px 40px rgb(37 35 43 / .08) !important; }
 .light .experience-feature [class*="bg-black/"] { background: rgb(242 240 235 / .72) !important; }
 .light .experience-feature [class*="border-violet-"], .light .project-card [class*="border-violet-"] { border-color: rgb(102 84 168 / .35) !important; }
@@ -244,6 +244,8 @@ section[id] > div > div.border-l > div.scroll-reveal:nth-child(3) { transition-d
 .light .ambient-glow { opacity: .25; }
 .light main { background: #F2F0EB !important; }
 .light header { background: rgb(242 240 235 / .92) !important; }
+.light header[class*="bg-[#08090d]"] { background: rgb(242 240 235 / .92) !important; }
+.light main[class*="bg-[#08090d]"] { background: #F2F0EB !important; }
 
 .light .timeline-track { border-color: rgb(71 78 94 / .2); }
 .light .timeline-track:has(.is-revealed) { border-color: rgb(124 58 237 / .42); }
