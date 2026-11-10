@@ -195,6 +195,12 @@ section[id] { scroll-margin-top: 5rem; }
 .project-card { position: relative; isolation: isolate; }
 .project-card::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0; background: radial-gradient(280px circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%), rgb(167 139 250 / .12), transparent 72%); transition: opacity 300ms ease; }
 .project-card:hover::before { opacity: 1; }
+.skill-group:hover { transform: translateY(-3px); border-color: rgb(196 181 253 / .36); box-shadow: 0 16px 34px rgb(76 29 149 / .12); }
+.skill-showcase span { line-height: 1.2; }
+.skill-showcase span:hover { box-shadow: 0 8px 18px rgb(76 29 149 / .16); }
+.light .skill-group { background: #E7E3DC !important; border-color: #D5D0C8 !important; }
+.light .skill-group:hover { border-color: rgb(102 84 168 / .42) !important; box-shadow: 0 16px 34px rgb(37 35 43 / .1); }
+.light .skill-showcase span { background: #F2F0EB !important; border-color: #D5D0C8 !important; color: #55515D !important; }
 .academic-card, .research-card { transition: transform 260ms cubic-bezier(.22,1,.36,1), box-shadow 260ms ease, border-color 260ms ease; }
 .academic-card:hover, .research-card:hover { transform: translateY(-4px) scale(1.01); border-color: rgb(196 181 253 / .52); box-shadow: 0 22px 55px rgb(76 29 149 / .22); }
 .academic-card > div > div:last-child > div { border-radius: .9rem; background: rgb(255 255 255 / .04); padding: .8rem .9rem; }
