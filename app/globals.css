@@ -188,6 +188,18 @@ section[id] { scroll-margin-top: 5rem; }
 .project-card { position: relative; isolation: isolate; }
 .project-card::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0; background: radial-gradient(280px circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%), rgb(167 139 250 / .12), transparent 72%); transition: opacity 300ms ease; }
 .project-card:hover::before { opacity: 1; }
+#about h2 { font-size: clamp(2.5rem, 4.5vw, 3.5rem); }
+#about p { line-height: 1.7; }
+#experience .experience-feature h3 { font-size: clamp(2rem, 3.5vw, 2.5rem); }
+#experience .experience-feature p { line-height: 1.7; }
+#experience .experience-feature li { font-size: 1rem; line-height: 1.7; }
+#experience .experience-feature > div > div > div > div { font-size: 1rem; }
+#projects article h3 { font-size: clamp(1.75rem, 3vw, 2rem); }
+#projects article { font-size: 1rem; }
+#projects article p { line-height: 1.7; }
+#skills h3 { font-size: 1rem; }
+#skills span { font-size: .9375rem; }
+nav[aria-label="Primary navigation"] { font-size: 1rem; }
 .scroll-reveal.is-revealed { opacity: 1; transform: translateY(0); }
 section[id] article.scroll-reveal:nth-child(2) { transition-delay: 120ms; }
 section[id] article.scroll-reveal:nth-child(3) { transition-delay: 240ms; }
