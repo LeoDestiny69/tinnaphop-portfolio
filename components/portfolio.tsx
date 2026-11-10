@@ -106,13 +106,62 @@ export function Portfolio() {
 
           <section id="skills" className="order-4 border-t border-white/[.08] py-16 md:py-20"><div className="grid gap-12 md:grid-cols-[.7fr_1.3fr]"><SectionLabel sectionId="skills" label="Technical skills" /><div className="grid gap-x-8 gap-y-10 sm:grid-cols-2">{skillGroups.map((group) => <div data-reveal key={group.label}><h3 className="mb-4 text-sm font-medium text-white/45">{group.label}</h3><div className="flex flex-wrap gap-2">{group.items.map((item) => <span key={item} className="rounded-lg bg-white/[.06] px-3 py-2 text-sm text-white/75">{item}</span>)}</div></div>)}</div></div></section>
 
-          <section id="experience" className="order-2 border-t border-white/[.08] py-16 md:py-20"><div data-reveal><SectionLabel sectionId="experience" label="Professional experience" /></div><div className="mt-10 grid gap-12 lg:grid-cols-[.72fr_1.28fr]"><div className="timeline-track ml-2 border-l border-white/10 pl-8">{experience.map((item) => <div data-reveal key={item.company} className="relative pb-10 last:pb-0"><span data-reveal className="timeline-node absolute -left-[37px] top-1 size-2 rounded-full bg-violet-300 ring-8 ring-[#08090d]" /><p className="text-xs uppercase tracking-[.16em] text-violet-300"><span className="mr-3 text-[10px] tracking-[.18em] text-violet-200/70">{item.category}</span>{item.period}</p><h3 className="mt-3 text-xl font-medium">{item.role}</h3><p className="mt-1 text-sm text-white/45">{item.company}</p><p className="mt-4 max-w-xl leading-7 text-white/55">{item.detail}</p></div>)}</div><div className="min-w-0">{experience[0].overview && <><h2 data-reveal className="text-3xl font-medium tracking-[-.035em] sm:text-4xl">Where I&apos;ve Worked</h2><p data-reveal className="mt-3 text-base text-violet-200/80">My professional journey and technical contributions.</p><p data-reveal className="mt-5 max-w-3xl text-base leading-8 text-white/60">{experience[0].overview}</p><div data-reveal className="mt-9"><p className="mb-4 text-sm font-medium uppercase tracking-[.14em] text-white/45">Key responsibilities</p><ul className="grid gap-3 text-sm leading-7 text-white/60">{experience[0].responsibilities?.map((item) => <li key={item} className="flex gap-3"><span className="mt-3 size-1.5 shrink-0 rounded-full bg-violet-300" />{item}</li>)}</ul></div><div data-reveal className="mt-10"><p className="mb-4 text-sm font-medium uppercase tracking-[.14em] text-white/45">Technical contributions</p><div className="grid gap-4 sm:grid-cols-2">{experience[0].contributions?.map((item) => <div key={item.label} className="rounded-xl border border-white/10 bg-white/[.025] p-4"><h3 className="text-sm font-medium text-violet-200">{item.label}</h3><p className="mt-2 text-sm leading-6 text-white/55">{item.text}</p></div>)}</div></div></>}</div></div></section>
+          <FeaturedExperience />
+          {false && (<section id="experience" className="order-2 border-t border-white/[.08] py-16 md:py-20"><div data-reveal><SectionLabel sectionId="experience" label="Professional experience" /></div><div className="mt-10 grid gap-12 lg:grid-cols-[.72fr_1.28fr]"><div className="timeline-track ml-2 border-l border-white/10 pl-8">{experience.map((item) => <div data-reveal key={item.company} className="relative pb-10 last:pb-0"><span data-reveal className="timeline-node absolute -left-[37px] top-1 size-2 rounded-full bg-violet-300 ring-8 ring-[#08090d]" /><p className="text-xs uppercase tracking-[.16em] text-violet-300"><span className="mr-3 text-[10px] tracking-[.18em] text-violet-200/70">{item.category}</span>{item.period}</p><h3 className="mt-3 text-xl font-medium">{item.role}</h3><p className="mt-1 text-sm text-white/45">{item.company}</p><p className="mt-4 max-w-xl leading-7 text-white/55">{item.detail}</p></div>)}</div><div className="min-w-0">{experience[0].overview && <><h2 data-reveal className="text-3xl font-medium tracking-[-.035em] sm:text-4xl">Where I&apos;ve Worked</h2><p data-reveal className="mt-3 text-base text-violet-200/80">My professional journey and technical contributions.</p><p data-reveal className="mt-5 max-w-3xl text-base leading-8 text-white/60">{experience[0].overview}</p><div data-reveal className="mt-9"><p className="mb-4 text-sm font-medium uppercase tracking-[.14em] text-white/45">Key responsibilities</p><ul className="grid gap-3 text-sm leading-7 text-white/60">{experience[0].responsibilities?.map((item) => <li key={item} className="flex gap-3"><span className="mt-3 size-1.5 shrink-0 rounded-full bg-violet-300" />{item}</li>)}</ul></div><div data-reveal className="mt-10"><p className="mb-4 text-sm font-medium uppercase tracking-[.14em] text-white/45">Technical contributions</p><div className="grid gap-4 sm:grid-cols-2">{experience[0].contributions?.map((item) => <div key={item.label} className="rounded-xl border border-white/10 bg-white/[.025] p-4"><h3 className="text-sm font-medium text-violet-200">{item.label}</h3><p className="mt-2 text-sm leading-6 text-white/55">{item.text}</p></div>)}</div></div></>}</div></div></section>)}
 
           <section id="contact" className="order-6 border-t border-white/[.08] py-16 md:py-20"><div className="rounded-3xl border border-violet-300/20 bg-gradient-to-br from-violet-950/30 to-blue-950/10 p-8 sm:p-12"><div className="max-w-2xl"><SectionLabel sectionId="contact" label="Get in touch" /><h2 className="mt-8 text-4xl font-medium tracking-[-.04em] sm:text-6xl">Let&apos;s build something <span className="text-white/40">useful.</span></h2><p className="mt-6 leading-7 text-white/55">Have a project, opportunity, or just want to talk tech? I&apos;d love to hear from you.</p><div className="mt-8 flex flex-wrap gap-3"><a href={`mailto:${profile.email}`} className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#101117]"><Mail size={16} /> Email me</a><a href={profile.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white/80"><Link2 size={16} /> LinkedIn</a></div></div></div></section>
-          <footer className="flex flex-col gap-4 border-t border-white/[.08] py-8 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between"><span>© 2026 Tinnaphop Saelim</span><div className="flex items-center gap-4"><a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub"><Link2 size={16} /></a><a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Link2 size={16} /></a><a href={`mailto:${profile.email}`} aria-label="Email"><Mail size={16} /></a></div></footer>
+          <footer className="order-7 flex flex-col gap-4 border-t border-white/[.08] py-8 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between"><span>© 2026 Tinnaphop Saelim</span><div className="flex items-center gap-4"><a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub"><Link2 size={16} /></a><a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Link2 size={16} /></a><a href={`mailto:${profile.email}`} aria-label="Email"><Mail size={16} /></a></div></footer>
         </div>
       </main>
     </div>
+  )
+}
+
+function FeaturedExperience() {
+  const primary = experience[0]
+  const research = experience[1]
+  const education = experience[2]
+
+  return (
+    <section id="experience" className="order-2 border-t border-white/[.08] py-16 md:py-20">
+      <div data-reveal>
+        <SectionLabel sectionId="experience" label="Professional experience" />
+        <h2 data-reveal className="mt-8 max-w-3xl text-4xl font-medium tracking-[-.045em] sm:text-6xl">Experience &amp; Background</h2>
+        <p data-reveal className="mt-5 text-base text-violet-200/80">My professional journey and technical background.</p>
+      </div>
+
+      <article data-reveal className="experience-feature mt-10 rounded-3xl border border-violet-300/25 bg-gradient-to-br from-violet-950/35 via-white/[.035] to-blue-950/15 p-6 shadow-2xl shadow-violet-950/20 sm:p-10">
+        <div className="flex flex-wrap items-start justify-between gap-5 border-b border-white/10 pb-7">
+          <div>
+            <span className="inline-flex rounded-full border border-violet-300/35 bg-violet-300/10 px-3 py-1 text-xs font-medium uppercase tracking-[.16em] text-violet-200">Primary experience</span>
+            <h3 className="mt-5 text-3xl font-medium tracking-tight sm:text-4xl">{primary.role}</h3>
+            <p className="mt-2 text-lg text-violet-200">{primary.company}</p>
+          </div>
+          <p className="text-sm uppercase tracking-[.14em] text-white/50">{primary.period}</p>
+        </div>
+        <div className="mt-8 grid gap-10 lg:grid-cols-[.9fr_1.1fr]">
+          <div>
+            <p className="text-sm font-medium uppercase tracking-[.14em] text-white/45">Employment overview</p>
+            <p className="mt-4 max-w-xl text-base leading-8 text-white/65">{primary.overview}</p>
+            <div className="mt-8">
+              <p className="text-sm font-medium uppercase tracking-[.14em] text-white/45">Key responsibilities</p>
+              <ul className="mt-4 grid gap-3 text-sm leading-7 text-white/65">{primary.responsibilities?.map((item) => <li key={item} className="flex gap-3"><span className="mt-3 size-1.5 shrink-0 rounded-full bg-violet-300" />{item}</li>)}</ul>
+            </div>
+          </div>
+          <div>
+            <p className="text-sm font-medium uppercase tracking-[.14em] text-white/45">Technical contributions</p>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">{primary.contributions?.map((item) => <div key={item.label} className="rounded-xl border border-white/10 bg-black/10 p-4"><p className="text-sm font-medium text-violet-200">{item.label}</p><p className="mt-2 text-sm leading-6 text-white/55">{item.text}</p></div>)}</div>
+          </div>
+        </div>
+      </article>
+
+      <div data-reveal className="mt-14">
+        <p className="text-sm font-medium uppercase tracking-[.18em] text-white/45">Additional background</p>
+        <div className="mt-5 grid gap-5 md:grid-cols-2">
+          {[research, education].map((item) => <article key={item.company} className="rounded-2xl border border-white/10 bg-white/[.025] p-6 sm:p-7"><span className="text-xs font-medium uppercase tracking-[.16em] text-violet-300">{item.category}</span><div className="mt-4 flex items-start justify-between gap-4"><div><h3 className="text-xl font-medium">{item.role}</h3><p className="mt-1 text-sm text-white/45">{item.company}</p></div><p className="shrink-0 text-xs uppercase tracking-[.12em] text-white/40">{item.period}</p></div><p className="mt-5 text-sm leading-7 text-white/55">{item.detail}</p></article>)}
+        </div>
+      </div>
+    </section>
   )
 }
 
