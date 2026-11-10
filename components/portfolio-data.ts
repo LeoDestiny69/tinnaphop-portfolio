@@ -64,6 +64,6 @@ export const experience = [
     ],
     stack: ['React.js', 'Next.js', 'TypeScript', 'Node.js', 'API Development', 'PostgreSQL', 'Prisma ORM', 'Sequelize ORM', 'LINE LIFF SDK', 'Docker', 'Git', 'AWS EC2'],
   },
-  { category: 'Research Experience', period: '2025', role: 'Research Assistant Intern', company: 'INECTEC — NSTDA', detail: 'Conducted deepfake detection research with TensorFlow and PyTorch, prepared image datasets, and built image preprocessing workflows with OpenCV.', overview: undefined, responsibilities: undefined, contributions: undefined, highlights: undefined, stack: undefined },
-  { category: 'Education', period: '2021 — 2025', role: "Bachelor's Degree in Computer Science", company: 'Bangkok University', detail: 'GPA: 3.33', overview: undefined, responsibilities: undefined, contributions: undefined, highlights: undefined, stack: undefined },
+  { category: 'Research Experience', period: '2025', role: 'Research Assistant Intern', company: 'INECTEC — NSTDA', detail: 'Conducted deepfake detection research with TensorFlow and PyTorch, prepared image datasets, and built image preprocessing workflows with OpenCV.', technologies: ['TensorFlow', 'PyTorch', 'OpenCV'], overview: undefined, responsibilities: undefined, contributions: undefined, highlights: undefined, stack: undefined },
+  { category: 'Education', period: '2021 — 2025', role: "Bachelor's Degree in Computer Science", company: 'Bangkok University', detail: 'GPA: 3.33', academicAchievement: 'Graduated with Second-Class Honors', overview: undefined, responsibilities: undefined, contributions: undefined, highlights: undefined, stack: undefined },
 ]
