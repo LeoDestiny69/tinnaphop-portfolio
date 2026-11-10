@@ -121,19 +121,19 @@ export function Portfolio() {
 function AboutSection() {
   return (
     <section id="about" className="order-2 border-t border-white/[.08] py-16 md:py-20">
-      <div className="grid gap-10 md:grid-cols-[1.1fr_.9fr] md:items-start md:gap-16">
+      <div className="w-full">
         <div data-reveal>
           <SectionLabel sectionId="about" label="ABOUT ME" />
           <h2 data-reveal className="mt-8 max-w-2xl font-medium leading-[1.12] tracking-[-.045em] text-[clamp(3.625rem,5vw,4rem)]">Beyond Writing Code.</h2>
 <p data-reveal className="mt-4 max-w-2xl leading-[1.7] text-[clamp(1.3125rem,2vw,1.4375rem)] text-violet-200/80">A little more about the developer behind the projects.</p>
-          <p data-reveal className="mt-5 max-w-2xl text-lg leading-8 text-white/65">I&apos;m a Full Stack Developer with a background in Computer Science and hands-on experience building enterprise applications. I enjoy turning business requirements into practical software solutions, working across frontend, backend, and database development.</p>
-          <div data-reveal className="mt-10 grid gap-8">
+          <p data-reveal className="mt-8 font-semibold uppercase tracking-[.12em] text-[clamp(1.1875rem,1.7vw,1.25rem)] text-violet-200">Who I Am</p><p data-reveal className="mt-3 max-w-3xl text-lg leading-8 text-white/65">I&apos;m a Full Stack Developer with a background in Computer Science and hands-on experience building enterprise applications. I enjoy turning business requirements into practical software solutions, working across frontend, backend, and database development.</p>
+          <EducationCard />
+          <div data-reveal className="mt-12 grid gap-8 border-t border-white/10 pt-8 sm:grid-cols-2">
             <div><p className="font-semibold uppercase tracking-[.12em] text-[clamp(1.25rem,1.8vw,1.375rem)] text-violet-200">What I Enjoy Building</p><p className="mt-3 max-w-xl leading-[1.65] text-[clamp(1.125rem,1.5vw,1.1875rem)] text-white/60">I&apos;m particularly interested in developing business applications, ERP systems, and tools that simplify complex workflows. I enjoy understanding how systems work together and translating real-world requirements into functional, reliable applications.</p></div>
             <div><p className="font-semibold uppercase tracking-[.12em] text-[clamp(1.25rem,1.8vw,1.375rem)] text-violet-200">How I Approach Development</p><p className="mt-3 max-w-xl leading-[1.65] text-[clamp(1.125rem,1.5vw,1.1875rem)] text-white/60">I value clean, maintainable code and practical problem-solving. I enjoy building applications that support real business operations and turn complex requirements into reliable software.</p></div>
-            <div className="flex flex-wrap gap-2"><span className="rounded-full border border-white/10 bg-white/[.05] px-3 py-2 text-sm text-white/70">Problem Solving</span><span className="rounded-full border border-white/10 bg-white/[.05] px-3 py-2 text-sm text-white/70">Full Stack Development</span><span className="rounded-full border border-white/10 bg-white/[.05] px-3 py-2 text-sm text-white/70">System Thinking</span><span className="rounded-full border border-white/10 bg-white/[.05] px-3 py-2 text-sm text-white/70">Continuous Learning</span></div>
+            <div className="flex flex-wrap gap-2 sm:col-span-2"><span className="rounded-full border border-white/10 bg-white/[.05] px-3 py-2 text-sm text-white/70">Problem Solving</span><span className="rounded-full border border-white/10 bg-white/[.05] px-3 py-2 text-sm text-white/70">Full Stack Development</span><span className="rounded-full border border-white/10 bg-white/[.05] px-3 py-2 text-sm text-white/70">System Thinking</span><span className="rounded-full border border-white/10 bg-white/[.05] px-3 py-2 text-sm text-white/70">Continuous Learning</span></div>
           </div>
         </div>
-        <EducationCard />
       </div>
     </section>
   )
@@ -143,10 +143,10 @@ function EducationCard() {
   const education = experience[2]
 
   return (
-    <article data-reveal className="mt-0 rounded-2xl border border-violet-300/20 bg-gradient-to-br from-violet-300/[.08] via-white/[.035] to-transparent p-6 sm:p-7">
-      <div className="flex items-start gap-4">
-        <div className="grid size-14 shrink-0 place-items-center rounded-xl border border-violet-300/25 bg-white/90 p-2 shadow-lg shadow-violet-950/10"><img src="https://contents.bu.ac.th/contents/dist/images/bu_logo.svg" alt="Bangkok University logo" className="max-h-10 w-auto object-contain" /></div>
-        <div className="min-w-0 flex-1"><div className="flex flex-wrap items-start justify-between gap-3"><div><p className="text-xs font-semibold uppercase tracking-[.16em] text-violet-200">Academic Background</p><h3 className="mt-2 font-semibold leading-[1.15] text-[clamp(1.5625rem,2.4vw,1.75rem)] text-white">{education.role}</h3><p className="mt-2 text-[clamp(1.1875rem,1.7vw,1.3125rem)] text-white/65">{education.company}</p></div><p className="text-base font-medium uppercase tracking-[.12em] text-white/45">{education.period}</p></div><div className="mt-6 grid gap-3 sm:grid-cols-3"><div className="rounded-xl border border-white/10 bg-white/[.05] p-3"><p className="text-sm font-semibold uppercase tracking-[.14em] text-white/45">Period</p><p className="mt-2 text-base font-semibold text-white">{education.period}</p></div><div className="rounded-xl border border-violet-300/25 bg-violet-300/10 p-3"><p className="text-sm font-semibold uppercase tracking-[.14em] text-violet-200">GPA</p><p className="mt-2 font-semibold leading-none text-[clamp(1.625rem,2.4vw,1.875rem)] text-white">3.33</p></div><div className="rounded-xl border border-amber-300/25 bg-amber-300/10 p-3"><p className="text-sm font-semibold uppercase tracking-[.14em] text-amber-200">Honors</p><p className="mt-2 text-base font-semibold leading-6 text-white">Second-Class Honors</p></div></div></div>
+    <article data-reveal className="mt-12 rounded-2xl border border-violet-300/20 bg-gradient-to-br from-violet-300/[.08] via-white/[.035] to-transparent p-6 sm:p-8">
+      <div className="flex flex-col gap-7 lg:flex-row lg:items-center lg:gap-10">
+        <div className="flex min-w-0 flex-1 items-center gap-4"><div className="grid size-14 shrink-0 place-items-center rounded-xl border border-violet-300/25 bg-white/90 p-2 shadow-lg shadow-violet-950/10"><img src="https://contents.bu.ac.th/contents/dist/images/bu_logo.svg" alt="Bangkok University logo" className="max-h-10 w-auto object-contain" /></div><div><p className="text-sm font-semibold uppercase tracking-[.14em] text-violet-200">Academic Background</p><h3 className="mt-2 text-xl font-semibold tracking-tight text-white sm:text-2xl">{education.role}</h3><p className="mt-1 text-base text-white/65">{education.company}</p></div></div>
+        <div className="grid w-full shrink-0 grid-cols-3 gap-3 border-t border-white/10 pt-5 lg:w-auto lg:min-w-[28rem] lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0"><div><p className="text-sm font-semibold uppercase tracking-[.12em] text-white/45">Period</p><p className="mt-2 text-base font-semibold text-white">{education.period}</p></div><div><p className="text-sm font-semibold uppercase tracking-[.12em] text-violet-200">GPA</p><p className="mt-2 text-xl font-semibold text-white">3.33</p></div><div><p className="text-sm font-semibold uppercase tracking-[.12em] text-amber-200">Honors</p><p className="mt-2 text-base font-semibold leading-6 text-white">Second-Class Honors</p></div></div>
       </div>
     </article>
   )
