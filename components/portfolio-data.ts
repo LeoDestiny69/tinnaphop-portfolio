@@ -39,7 +39,32 @@ export const skillGroups = [
 ]
 
 export const experience = [
-  { period: '2025 — Feb 2026', role: 'Full Stack Developer', company: '365 Infotech Company Limited', detail: 'Developed and maintained ERP applications, built sales and employee management features, integrated LINE LIFF, and collaborated on database design.' },
-  { period: '2025', role: 'Research Assistant Intern', company: 'INECTEC — NSTDA', detail: 'Conducted deepfake detection research with TensorFlow and PyTorch, prepared image datasets, and built image preprocessing workflows with OpenCV.' },
-  { period: '2021 — 2025', role: "Bachelor's Degree in Computer Science", company: 'Bangkok University', detail: 'GPA: 3.33' },
+  {
+    period: 'September 2025 — February 2026',
+    role: 'Full Stack Developer',
+    company: '365 INFOTECH COMPANY LIMITED',
+    detail: 'Worked on enterprise resource planning applications that support internal business operations, from responsive interfaces and backend APIs to database management and deployment.',
+    overview: 'Contributed to the development and maintenance of ERP applications, collaborating with the development team to implement business requirements, operational workflows, external integrations, and reliable application functionality.',
+    responsibilities: [
+      'Developed and maintained ERP applications with Next.js, React.js, and TypeScript.',
+      'Built responsive frontend interfaces and backend APIs for business processes.',
+      'Designed and managed relational databases with PostgreSQL, Prisma ORM, and Sequelize ORM.',
+      'Implemented approval workflows, employee attendance management, and operational reporting.',
+      'Integrated external services including LINE LIFF SDK for mobile attendance and reporting.',
+      'Containerized applications with Docker, managed source code with Git, and supported AWS EC2 deployments.',
+    ],
+    contributions: [
+      { label: 'Frontend Development', text: 'Developed responsive, reusable interfaces for ERP modules and business workflows using React.js, Next.js, and TypeScript.' },
+      { label: 'Backend Development', text: 'Built backend APIs and application logic, connecting frontend applications with workflow services.' },
+      { label: 'Database Management', text: 'Designed and managed PostgreSQL structures and worked with Prisma ORM and Sequelize ORM for data operations.' },
+      { label: 'System Integration & Deployment', text: 'Integrated LINE LIFF SDK, standardized environments with Docker, managed Git workflows, and supported AWS EC2 deployment and maintenance.' },
+    ],
+    highlights: [
+      { title: 'Northingham ERP', overview: 'An enterprise ERP application supporting internal business operations and workforce management.', contributions: ['Business workflow functionalities and approval processes', 'Employee attendance management', 'Mobile attendance and reporting capabilities', 'LINE LIFF SDK integration', 'Frontend and backend development'] },
+      { title: 'Vitalia ERP', overview: 'An enterprise ERP application involving application development and maintenance.', contributions: ['Frontend and backend application development', 'Database-related operations and application data management', 'System maintenance and debugging', 'Improvements to existing application functionality'] },
+    ],
+    stack: ['React.js', 'Next.js', 'TypeScript', 'Node.js', 'API Development', 'PostgreSQL', 'Prisma ORM', 'Sequelize ORM', 'LINE LIFF SDK', 'Docker', 'Git', 'AWS EC2'],
+  },
+  { period: '2025', role: 'Research Assistant Intern', company: 'INECTEC — NSTDA', detail: 'Conducted deepfake detection research with TensorFlow and PyTorch, prepared image datasets, and built image preprocessing workflows with OpenCV.', overview: undefined, responsibilities: undefined, contributions: undefined, highlights: undefined, stack: undefined },
+  { period: '2021 — 2025', role: "Bachelor's Degree in Computer Science", company: 'Bangkok University', detail: 'GPA: 3.33', overview: undefined, responsibilities: undefined, contributions: undefined, highlights: undefined, stack: undefined },
 ]
