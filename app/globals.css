@@ -224,15 +224,27 @@ section[id] > div > div.border-l > div.scroll-reveal:nth-child(3) { transition-d
 .timeline-node { transition: box-shadow 500ms ease, transform 500ms ease; }
 .timeline-node.is-revealed { box-shadow: 0 0 0 8px rgb(196 181 253 / .12), 0 0 18px rgb(196 181 253 / .35); transform: scale(1.15); }
 
-.light main { background: #f5f7fb !important; color: #15161a !important; }
-.light header { color: #15161a; }
-.light [class*="text-white/"] { color: rgb(51 58 72 / .72) !important; }
-.light [class*="text-white/40"], .light [class*="text-white/45"] { color: rgb(71 78 94 / .78) !important; }
-.light [class*="text-white/65"], .light [class*="text-white/70"], .light [class*="text-white/80"] { color: rgb(51 58 72 / .9) !important; }
-.light [class*="border-white/"] { border-color: rgb(71 78 94 / .18) !important; }
-.light [class*="bg-white/"] { background-color: rgb(255 255 255 / .72) !important; }
-.light [class*="bg-[#101118]"] { background-color: #eef1f7 !important; }
-.light [class*="bg-[#08090d]"] { background-color: #f5f7fb !important; }
+.light,
+.light main { background: #F2F0EB !important; color: #25232B !important; }
+.light header { background: rgb(242 240 235 / .88) !important; color: #25232B !important; border-color: #D5D0C8 !important; }
+.light [class*="text-white"] { color: #25232B !important; }
+.light [class*="text-white/45"], .light [class*="text-white/50"], .light [class*="text-white/55"], .light [class*="text-white/60"], .light [class*="text-white/65"], .light [class*="text-white/70"], .light [class*="text-white/75"], .light [class*="text-white/80"] { color: #55515D !important; }
+.light [class*="text-white/35"], .light [class*="text-white/40"] { color: #68636F !important; }
+.light [class*="text-violet-"] { color: #6654A8 !important; }
+.light [class*="text-blue-"] { color: #4E5C91 !important; }
+.light [class*="text-emerald-"] { color: #287052 !important; }
+.light [class*="border-white/"] { border-color: #D5D0C8 !important; }
+.light [class*="bg-white/"] { background-color: #E7E3DC !important; }
+.light .bg-white { background-color: #6654A8 !important; color: #FFFFFF !important; }
+.light [class*="bg-[#08090d]"], .light [class*="bg-[#101118]"] { background-color: #E7E3DC !important; }
+.light .experience-feature, .light .project-card { background: #E7E3DC !important; border-color: #D5D0C8 !important; box-shadow: 0 18px 40px rgb(37 35 43 / .08) !important; }
+.light .experience-feature [class*="bg-black/"] { background: rgb(242 240 235 / .72) !important; }
+.light .experience-feature [class*="border-violet-"], .light .project-card [class*="border-violet-"] { border-color: rgb(102 84 168 / .35) !important; }
+.light .experience-feature [class*="text-amber-"] { color: #8B5E18 !important; }
+.light .ambient-glow { opacity: .25; }
+.light main { background: #F2F0EB !important; }
+.light header { background: rgb(242 240 235 / .92) !important; }
+
 .light .timeline-track { border-color: rgb(71 78 94 / .2); }
 .light .timeline-track:has(.is-revealed) { border-color: rgb(124 58 237 / .42); }
 .light .timeline-node.is-revealed { box-shadow: 0 0 0 8px rgb(124 58 237 / .1), 0 0 18px rgb(124 58 237 / .22); }
