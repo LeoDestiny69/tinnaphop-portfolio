@@ -35,7 +35,8 @@ export const skillGroups = [
   { label: 'Frontend', items: ['React.js', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Material UI'] },
   { label: 'Backend', items: ['Node.js', 'Express.js', 'FastAPI', 'Django'] },
   { label: 'Database & ORM', items: ['PostgreSQL', 'MySQL', 'Prisma ORM', 'Sequelize ORM', 'SQL'] },
-  { label: 'Tools & AI', items: ['Docker', 'Git', 'AWS EC2', 'Python', 'TensorFlow', 'PyTorch', 'OpenCV'] },
+  { label: 'DevOps & Tools', items: ['Docker', 'Git', 'AWS EC2'] },
+  { label: 'AI & Computer Vision', items: ['Python', 'TensorFlow', 'PyTorch', 'OpenCV'] },
 ]
 
 export const experience = [

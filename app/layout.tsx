@@ -5,7 +5,18 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Tinnaphop Saelim — Full Stack Developer',
   description: 'Portfolio of Tinnaphop Saelim, a Full Stack Developer building reliable business applications with React, Next.js, TypeScript, and PostgreSQL.',
-  generator: 'v0.app',
+  openGraph: {
+    title: 'Tinnaphop Saelim — Full Stack Developer',
+    description: 'Portfolio of Tinnaphop Saelim, a Full Stack Developer building reliable business applications with React, Next.js, TypeScript, and PostgreSQL.',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Tinnaphop Saelim Portfolio',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Tinnaphop Saelim — Full Stack Developer',
+    description: 'Portfolio of Tinnaphop Saelim, a Full Stack Developer building reliable business applications.',
+  },
   icons: {
     icon: [
       {
