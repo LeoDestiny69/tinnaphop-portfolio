@@ -9,6 +9,7 @@ export const profile = {
 export const projects = [
   {
     number: '01',
+    showcase: 'northingham' as const,
     title: 'Northingham ERP',
     type: 'Enterprise Resource Planning System',
     overview: 'Northingham ERP is a business operations platform for sales workflows, invoicing, employee attendance, approvals, and workforce management. It brings these day-to-day processes into one internal system.',
@@ -20,6 +21,7 @@ export const projects = [
   },
   {
     number: '02',
+    showcase: 'vitalia' as const,
     title: 'Vitalia ERP',
     type: 'Enterprise Application Maintenance',
     overview: 'Vitalia ERP is a full-stack ERP application maintained and improved for reliable internal business operations. The work focused on supporting an existing codebase and keeping business workflows dependable.',
